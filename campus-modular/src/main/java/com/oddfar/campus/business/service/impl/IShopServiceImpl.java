@@ -62,7 +62,9 @@ public class IShopServiceImpl extends ServiceImpl<IShopMapper, IShop> implements
         return shopList;
     }
 
-    //    @Async
+    /*
+    * GET得到茅台shop数据。
+    * */
     @Override
     public void refreshShop() {
 

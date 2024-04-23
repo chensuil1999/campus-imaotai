@@ -77,6 +77,10 @@ public class IMTServiceImpl implements IMTService {
     }
 
 
+    /*
+    * 使用GET命令
+    * 获取当前i茅台最新的版本号。
+    * */
     @Override
     public String getMTVersion() {
         String mtVersion = Convert.toStr(redisCache.getCacheObject("mt_version"));
@@ -505,7 +509,11 @@ public class IMTServiceImpl implements IMTService {
             e.printStackTrace();
         }
     }
-
+/*
+* 更新茅台版本，
+* 更新茅台经销商IShop
+* 更新sessionid（不知道这个sessionid有什么用),并建立item物品目录。
+* */
     @Override
     public void refreshAll() {
         refreshMTVersion();

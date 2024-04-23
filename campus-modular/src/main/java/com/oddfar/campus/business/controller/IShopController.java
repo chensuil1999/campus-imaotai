@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 /**
- * i茅台商品Controller
+ * i茅台店铺Controller
  *
  * @author oddfar
  * @date 2023-07-05
  */
 @RestController
 @RequestMapping("/imt/shop")
-@ApiResource(name = "i茅台商品Controller")
+@ApiResource(name = "i茅台Controller")
 public class IShopController {
     @Autowired
     private IShopService iShopService;
@@ -29,7 +29,7 @@ public class IShopController {
     private IShopMapper iShopMapper;
 
     /**
-     * 查询i茅台商品列表
+     * 查询i茅台店铺列表
      */
     @GetMapping("/list")
     public R list(IShop iShop) {
@@ -40,9 +40,9 @@ public class IShopController {
 
 
     /**
-     * 刷新i茅台商品列表
+     * 刷新i茅台店铺列表
      */
-    @GetMapping(value = "/refresh", name = "刷新i茅台商品列表")
+    @GetMapping(value = "/refresh", name = "刷新i茅台店铺列表")
     @PreAuthorize("@ss.resourceAuth()")
     public R refreshShop() {
         iShopService.refreshShop();

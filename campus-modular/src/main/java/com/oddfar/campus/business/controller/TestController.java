@@ -53,7 +53,7 @@ public class TestController {
     @Anonymous
     @GetMapping(value = "/3", name = "测试3的接口")
     public R test3() {
-        iShopService.selectShopList();
+//        iShopService.selectShopList();
         return R.ok();
     }
 

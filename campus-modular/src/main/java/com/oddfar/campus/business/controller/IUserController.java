@@ -48,6 +48,7 @@ public class IUserController {
     /**
      * 发送验证码
      */
+
     @GetMapping(value = "/sendCode", name = "发送验证码")
     @PreAuthorize("@ss.resourceAuth()")
     public R sendCode(String mobile, String deviceId) {

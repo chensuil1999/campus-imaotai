@@ -43,6 +43,9 @@ public interface BaseMapperX<T> extends BaseMapper<T> {
         return selectOne(new LambdaQueryWrapper<T>().eq(field1, value1).eq(field2, value2));
     }
 
+    /*
+
+     */
     default Long selectCount() {
         return selectCount(new QueryWrapper<T>());
     }
